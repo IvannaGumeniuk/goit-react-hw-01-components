@@ -7,11 +7,14 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-export const StatisticItem = ({ label, percentage}) => {
-    <li className={styles.item} style={{ backgroundColor: getRandomHexColor() }}>
+export const StatisticItem = ({ label, percentage }) => {
+    return (
+<li className={styles.item} style={{ backgroundColor: getRandomHexColor() }}>
         <span className={styles.label}>{label}</span>
         <span className={styles.percentage}>{percentage}%</span>
     </li>
+    )
+    
 }
 
 StatisticItem.propTypes = {
